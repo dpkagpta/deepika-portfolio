@@ -872,6 +872,78 @@ a:hover {
     color: var(--gray-secondary);
 }
 
+/* Project Highlights Section */
+.projects-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-normal);
+    border-left: 4px solid var(--primary-color);
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-left-color: var(--secondary-color);
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.project-card h3 {
+    color: var(--dark-primary);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-card p {
+    color: var(--gray-primary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.tag {
+    background: var(--gray-light);
+    color: var(--dark-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.tag:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .hero-content {
@@ -888,7 +960,8 @@ a:hover {
     }
     
     .music-grid,
-    .video-grid {
+    .video-grid,
+    .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
@@ -940,7 +1013,8 @@ a:hover {
     }
     
     .music-grid,
-    .video-grid {
+    .video-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
     }
     
@@ -952,5 +1026,6 @@ a:hover {
         max-width: 85%;
     }
 }
-C a c h e - b u s t i n g   u p d a t e  
+C a c h e - b u s t i n g   u p d a t e 
+ 
  
