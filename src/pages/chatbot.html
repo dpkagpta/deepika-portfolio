@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant - Deepika Gupta | Intelligent Conversational AI</title>
+    <link rel="stylesheet" href="../css/../css/styles.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="logo-icon">🧠</span>
+                    <div class="brand-text">
+                        <h1>Deepika Gupta</h1>
+                        <span class="tagline">Applied AI/ML Engineer</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="blog.html" class="nav-link">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a></li>
+                <li><a href="chatbot.html" class="nav-link active">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Assistant</span>
+                </a></li>
+                <li><a href="music.html" class="nav-link">
+                    <i class="fas fa-music"></i>
+                    <span>Music Studio</span>
+                </a></li>
+                <li><a href="videos.html" class="nav-link">
+                    <i class="fas fa-video"></i>
+                    <span>Video Lab</span>
+                </a></li>
+                <li><a href="about.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chatbot Hero Section -->
+        <section class="chatbot-hero">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">AI Assistant</span>
+                    </h1>
+                    <p class="hero-description">
+                        Meet my personal AI assistant, trained on my expertise, experiences, and knowledge. 
+                        Ask about my work in machine learning, research projects, creative endeavors, or get technical insights.
+                    </p>
+                    <div class="ai-capabilities">
+                        <div class="capability-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Technical Expertise</span>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Research Insights</span>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-code"></i>
+                            <span>Code Examples</span>
+                        </div>
+                        <div class="capability-item">
+                            <i class="fas fa-music"></i>
+                            <span>Creative Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Chat Interface -->
+        <section class="chat-interface">
+            <div class="container">
+                <div class="chat-layout" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Chat Settings Panel -->
+                    <div class="chat-sidebar">
+                        <div class="sidebar-header">
+                            <h3>Chat Settings</h3>
+                            <button class="sidebar-toggle" id="sidebar-toggle">
+                                <i class="fas fa-cog"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="sidebar-content">
+                            <div class="setting-group">
+                                <label for="ai-personality">AI Personality</label>
+                                <select id="ai-personality">
+                                    <option value="professional">Professional Researcher</option>
+                                    <option value="casual">Casual Mentor</option>
+                                    <option value="technical">Technical Expert</option>
+                                    <option value="creative">Creative Thinker</option>
+                                </select>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <label for="response-length">Response Length</label>
+                                <select id="response-length">
+                                    <option value="concise">Concise</option>
+                                    <option value="detailed" selected>Detailed</option>
+                                    <option value="comprehensive">Comprehensive</option>
+                                </select>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <label for="expertise-focus">Expertise Focus</label>
+                                <select id="expertise-focus">
+                                    <option value="all">All Areas</option>
+                                    <option value="ml">Machine Learning</option>
+                                    <option value="cv">Computer Vision</option>
+                                    <option value="nlp">Natural Language Processing</option>
+                                    <option value="music">Music & Creativity</option>
+                                    <option value="video">Video Production</option>
+                                </select>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="code-examples" checked>
+                                    <span class="toggle-slider"></span>
+                                    Include Code Examples
+                                </label>
+                            </div>
+                            
+                            <div class="setting-group">
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="research-citations">
+                                    <span class="toggle-slider"></span>
+                                    Include Research Citations
+                                </label>
+                            </div>
+                            
+                            <div class="conversation-controls">
+                                <button class="btn btn-outline" id="export-chat">
+                                    <i class="fas fa-download"></i>
+                                    Export Chat
+                                </button>
+                                <button class="btn btn-secondary" id="clear-chat">
+                                    <i class="fas fa-trash"></i>
+                                    Clear History
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Chat Area -->
+                    <div class="chat-main">
+                        <div class="chat-header">
+                            <div class="ai-avatar">
+                                <div class="avatar-glow">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="status-indicator online"></div>
+                            </div>
+                            <div class="ai-info">
+                                <h3>Deepika Gupta AI Assistant</h3>
+                                <span class="ai-status">
+                                    <span class="typing-indicator">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </span>
+                                    <span class="status-text">Ready to assist</span>
+                                </span>
+                            </div>
+                            <div class="chat-actions">
+                                <button class="chat-action" id="voice-toggle" title="Voice Input">
+                                    <i class="fas fa-microphone"></i>
+                                </button>
+                                <button class="chat-action" id="fullscreen-toggle" title="Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="chat-messages" id="chat-messages">
+                            <!-- Welcome Message -->
+                            <div class="message ai-message">
+                                <div class="message-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="message-content">
+                                    <div class="message-text">
+                                        <h4>Welcome! I'm Deepika Gupta's AI Assistant 🤖</h4>
+                                        <p>I'm here to help you learn about my creator's work in AI, machine learning, and creative projects. Here are some things you can ask me about:</p>
+                                        <div class="suggestion-chips">
+                                            <button class="suggestion-chip" data-suggestion="Tell me about your experience in machine learning">
+                                                <i class="fas fa-brain"></i>
+                                                ML Experience
+                                            </button>
+                                            <button class="suggestion-chip" data-suggestion="What are your recent research projects?">
+                                                <i class="fas fa-flask"></i>
+                                                Research Projects
+                                            </button>
+                                            <button class="suggestion-chip" data-suggestion="Show me some code examples">
+                                                <i class="fas fa-code"></i>
+                                                Code Examples
+                                            </button>
+                                            <button class="suggestion-chip" data-suggestion="Tell me about your music compositions">
+                                                <i class="fas fa-music"></i>
+                                                Music & Creativity
+                                            </button>
+                                            <button class="suggestion-chip" data-suggestion="What video projects have you worked on?">
+                                                <i class="fas fa-video"></i>
+                                                Video Projects
+                                            </button>
+                                            <button class="suggestion-chip" data-suggestion="What are the latest trends in AI?">
+                                                <i class="fas fa-chart-line"></i>
+                                                AI Trends
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="message-time">
+                                        <span id="current-time"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-input-area">
+                            <div class="input-container">
+                                <div class="input-wrapper">
+                                    <button class="input-action" id="attach-file" title="Attach File">
+                                        <i class="fas fa-paperclip"></i>
+                                    </button>
+                                    <input 
+                                        type="text" 
+                                        id="chat-input" 
+                                        placeholder="Ask me anything about AI, ML, or my creative work..."
+                                        autocomplete="off"
+                                    >
+                                    <button class="input-action" id="emoji-picker" title="Emojis">
+                                        <i class="fas fa-smile"></i>
+                                    </button>
+                                    <button class="send-button" id="send-message">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                                <div class="input-suggestions" id="input-suggestions">
+                                    <!-- Dynamic suggestions will appear here -->
+                                </div>
+                            </div>
+                            
+                            <div class="quick-actions">
+                                <button class="quick-action" data-action="explain-concept">
+                                    <i class="fas fa-lightbulb"></i>
+                                    Explain Concept
+                                </button>
+                                <button class="quick-action" data-action="code-example">
+                                    <i class="fas fa-code"></i>
+                                    Code Example
+                                </button>
+                                <button class="quick-action" data-action="research-summary">
+                                    <i class="fas fa-flask"></i>
+                                    Research Summary
+                                </button>
+                                <button class="quick-action" data-action="career-advice">
+                                    <i class="fas fa-user-graduate"></i>
+                                    Career Advice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chat Analytics Panel -->
+                    <div class="chat-analytics">
+                        <div class="analytics-header">
+                            <h3>Conversation Analytics</h3>
+                            <button class="analytics-toggle" id="analytics-toggle">
+                                <i class="fas fa-chart-bar"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="analytics-content">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="metric-info">
+                                    <span class="metric-value" id="message-count">0</span>
+                                    <span class="metric-label">Messages</span>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="metric-info">
+                                    <span class="metric-value" id="session-time">0m</span>
+                                    <span class="metric-label">Session Time</span>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="metric-info">
+                                    <span class="metric-value" id="topics-covered">0</span>
+                                    <span class="metric-label">Topics</span>
+                                </div>
+                            </div>
+                            
+                            <div class="topic-cloud">
+                                <h4>Topics Discussed</h4>
+                                <div class="topics" id="topic-tags">
+                                    <!-- Dynamic topic tags will appear here -->
+                                </div>
+                            </div>
+                            
+                            <div class="conversation-insights">
+                                <h4>Conversation Insights</h4>
+                                <div class="insight-list" id="insights-list">
+                                    <div class="insight-item">
+                                        <i class="fas fa-info-circle"></i>
+                                        <span>Start your conversation to see insights</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Capabilities Showcase -->
+        <section class="capabilities-showcase">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">AI Assistant Capabilities</h2>
+                    <p class="section-subtitle">Powered by advanced NLP and trained on comprehensive knowledge</p>
+                </div>
+                
+                <div class="capabilities-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Technical Expertise</h3>
+                        <p>Deep knowledge of machine learning algorithms, neural networks, and AI architectures.</p>
+                        <ul class="capability-features">
+                            <li>Algorithm explanations</li>
+                            <li>Model recommendations</li>
+                            <li>Best practices</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Code Generation</h3>
+                        <p>Generate, explain, and optimize code in Python, TensorFlow, PyTorch, and more.</p>
+                        <ul class="capability-features">
+                            <li>Code examples</li>
+                            <li>Debugging assistance</li>
+                            <li>Performance optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Research Insights</h3>
+                        <p>Access to latest research findings, paper summaries, and trend analysis.</p>
+                        <ul class="capability-features">
+                            <li>Literature reviews</li>
+                            <li>Research summaries</li>
+                            <li>Trend analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <div class="capability-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Creative Problem Solving</h3>
+                        <p>Innovative approaches to complex problems and creative project insights.</p>
+                        <ul class="capability-features">
+                            <li>Solution brainstorming</li>
+                            <li>Creative methodologies</li>
+                            <li>Innovation strategies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Example Conversations -->
+        <section class="example-conversations">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Example Conversations</h2>
+                    <p class="section-subtitle">See what kinds of discussions you can have</p>
+                </div>
+                
+                <div class="examples-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <i class="fas fa-robot"></i>
+                            <span>Technical Discussion</span>
+                        </div>
+                        <div class="conversation-preview">
+                            <div class="preview-message user">
+                                "Can you explain how attention mechanisms work in transformers?"
+                            </div>
+                            <div class="preview-message ai">
+                                "Attention mechanisms in transformers allow the model to focus on different parts of the input sequence when processing each element. Unlike traditional RNNs..."
+                            </div>
+                        </div>
+                        <button class="try-example" data-example="attention-mechanisms">
+                            Try This Conversation
+                        </button>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-header">
+                            <i class="fas fa-code"></i>
+                            <span>Code Help</span>
+                        </div>
+                        <div class="conversation-preview">
+                            <div class="preview-message user">
+                                "Show me how to implement a CNN for image classification"
+                            </div>
+                            <div class="preview-message ai">
+                                "Here's a PyTorch implementation of a CNN for image classification:\n\n```python\nimport torch.nn as nn..."
+                            </div>
+                        </div>
+                        <button class="try-example" data-example="cnn-implementation">
+                            Try This Conversation
+                        </button>
+                    </div>
+                    
+                    <div class="example-card">
+                        <div class="example-header">
+                            <i class="fas fa-music"></i>
+                            <span>Creative Projects</span>
+                        </div>
+                        <div class="conversation-preview">
+                            <div class="preview-message user">
+                                "Tell me about your approach to AI-generated music"
+                            </div>
+                            <div class="preview-message ai">
+                                "My approach to AI music generation combines traditional music theory with machine learning. I use GANs and transformers to..."
+                            </div>
+                        </div>
+                        <button class="try-example" data-example="ai-music">
+                            Try This Conversation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Voice Input Modal -->
+    <div class="voice-modal" id="voice-modal">
+        <div class="voice-content">
+            <div class="voice-animation">
+                <div class="voice-circle"></div>
+                <div class="voice-wave"></div>
+            </div>
+            <h3>Listening...</h3>
+            <p>Speak now and I'll convert your speech to text</p>
+            <button class="btn btn-secondary" id="stop-voice">Stop Listening</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h3>Deepika Gupta AI Assistant</h3>
+                        <p>Intelligent Conversational AI</p>
+                    </div>
+                    <p class="footer-description">
+                        Experience personalized AI assistance powered by advanced machine learning and deep expertise.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>AI Features</h4>
+                    <ul class="footer-links">
+                        <li><a href="#technical-expertise">Technical Expertise</a></li>
+                        <li><a href="#code-generation">Code Generation</a></li>
+                        <li><a href="#research-insights">Research Insights</a></li>
+                        <li><a href="#creative-assistance">Creative Assistance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
+                        <li><a href="music.html">Music Studio</a></li>
+                        <li><a href="videos.html">Video Lab</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Deepika Gupta. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/../js/script.js"></script>
+    <script src="../js/chatbot.js"></script>
+</body>
+</html>

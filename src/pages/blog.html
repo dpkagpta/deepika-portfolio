@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Blog - Deepika Gupta | AI & Machine Learning Insights</title>
+    <link rel="stylesheet" href="../css/../css/styles.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="logo-icon">🧠</span>
+                    <div class="brand-text">
+                        <h1>Deepika Gupta</h1>
+                        <span class="tagline">Applied AI/ML Engineer</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="blog.html" class="nav-link active">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a></li>
+                <li><a href="chatbot.html" class="nav-link">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Assistant</span>
+                </a></li>
+                <li><a href="music.html" class="nav-link">
+                    <i class="fas fa-music"></i>
+                    <span>Music Studio</span>
+                </a></li>
+                <li><a href="videos.html" class="nav-link">
+                    <i class="fas fa-video"></i>
+                    <span>Video Lab</span>
+                </a></li>
+                <li><a href="about.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Blog Hero Section -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="blog-hero-content" data-aos="fade-up">
+                    <h1 class="blog-hero-title">
+                        <span class="gradient-text">Technical Blog</span>
+                    </h1>
+                    <p class="blog-hero-description">
+                        Deep insights into AI, Machine Learning, and the future of technology.
+                        Exploring complex algorithms, sharing research findings, and discussing industry trends.
+                    </p>
+                    <div class="blog-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">24</span>
+                            <span class="stat-label">Articles Published</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">15K</span>
+                            <span class="stat-label">Monthly Readers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Technical Topics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="blog-controls">
+            <div class="container">
+                <div class="controls-wrapper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="blog-search" placeholder="Search articles, topics, or keywords...">
+                            <button class="search-clear" id="search-clear">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-container">
+                        <div class="filter-group">
+                            <label for="category-filter">Category:</label>
+                            <select id="category-filter">
+                                <option value="all">All Categories</option>
+                                <option value="machine-learning">Machine Learning</option>
+                                <option value="deep-learning">Deep Learning</option>
+                                <option value="computer-vision">Computer Vision</option>
+                                <option value="nlp">Natural Language Processing</option>
+                                <option value="data-science">Data Science</option>
+                                <option value="ai-research">AI Research</option>
+                                <option value="tutorials">Tutorials</option>
+                                <option value="industry-insights">Industry Insights</option>
+                            </select>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <label for="sort-filter">Sort by:</label>
+                            <select id="sort-filter">
+                                <option value="newest">Newest First</option>
+                                <option value="oldest">Oldest First</option>
+                                <option value="popular">Most Popular</option>
+                                <option value="reading-time">Reading Time</option>
+                            </select>
+                        </div>
+                        
+                        <button class="filter-reset" id="filter-reset">
+                            <i class="fas fa-undo"></i>
+                            Reset Filters
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Article -->
+        <section class="featured-article">
+            <div class="container">
+                <div class="featured-wrapper" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Featured Article</span>
+                    </div>
+                    <article class="featured-post">
+                        <div class="featured-content">
+                            <div class="article-meta">
+                                <span class="category machine-learning">Machine Learning</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 12 min read</span>
+                                <span class="publish-date">December 15, 2024</span>
+                            </div>
+                            <h2 class="article-title">The Art and Science of Dataset Curation in Modern AI</h2>
+                            <p class="article-excerpt">
+                                In the rapidly evolving landscape of artificial intelligence, the quality of our datasets often determines the success of our models. This comprehensive guide explores the critical aspects of dataset curation, from collection strategies to bias mitigation, and provides practical insights for building robust, representative datasets that power next-generation AI systems.
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">Dataset Quality</span>
+                                <span class="tag">Bias Mitigation</span>
+                                <span class="tag">Data Engineering</span>
+                                <span class="tag">ML Pipeline</span>
+                            </div>
+                            <div class="article-actions">
+                                <button class="btn btn-primary read-article" data-article="dataset-curation">
+                                    <i class="fas fa-book-open"></i>
+                                    Read Full Article
+                                </button>
+                                <div class="article-stats">
+                                    <span class="stat-item">
+                                        <i class="fas fa-eye"></i>
+                                        2.4K views
+                                    </span>
+                                    <span class="stat-item">
+                                        <i class="fas fa-comment"></i>
+                                        18 comments
+                                    </span>
+                                    <span class="stat-item">
+                                        <i class="fas fa-heart"></i>
+                                        145 likes
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="featured-visual">
+                            <div class="data-visualization">
+                                <div class="data-point" style="--delay: 0s; --x: 20%; --y: 30%;"></div>
+                                <div class="data-point" style="--delay: 0.2s; --x: 40%; --y: 60%;"></div>
+                                <div class="data-point" style="--delay: 0.4s; --x: 70%; --y: 20%;"></div>
+                                <div class="data-point" style="--delay: 0.6s; --x: 60%; --y: 80%;"></div>
+                                <div class="data-point" style="--delay: 0.8s; --x: 80%; --y: 50%;"></div>
+                                <canvas id="data-connections"></canvas>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="blog-grid-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Latest Articles</h2>
+                    <div class="view-options">
+                        <button class="view-toggle active" data-view="grid">
+                            <i class="fas fa-th"></i>
+                        </button>
+                        <button class="view-toggle" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="blog-grid" id="blog-grid" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Article 1 -->
+                    <article class="blog-card" data-category="deep-learning" data-date="2024-12-10" data-popularity="95">
+                        <div class="card-image">
+                            <div class="neural-network-mini">
+                                <div class="mini-node"></div>
+                                <div class="mini-node"></div>
+                                <div class="mini-node"></div>
+                                <div class="mini-connection"></div>
+                                <div class="mini-connection"></div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <span class="category deep-learning">Deep Learning</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 8 min</span>
+                            </div>
+                            <h3 class="card-title">Transformer Architectures: Beyond Attention</h3>
+                            <p class="card-excerpt">Exploring the evolution of transformer models and their applications beyond natural language processing, including computer vision and multimodal learning.</p>
+                            <div class="card-footer">
+                                <div class="article-tags">
+                                    <span class="tag">Transformers</span>
+                                    <span class="tag">Attention</span>
+                                </div>
+                                <button class="read-more" data-article="transformers">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="blog-card" data-category="computer-vision" data-date="2024-12-05" data-popularity="87">
+                        <div class="card-image">
+                            <div class="cv-visualization">
+                                <div class="pixel-grid">
+                                    <div class="pixel active"></div>
+                                    <div class="pixel"></div>
+                                    <div class="pixel active"></div>
+                                    <div class="pixel"></div>
+                                    <div class="pixel active"></div>
+                                    <div class="pixel"></div>
+                                    <div class="pixel active"></div>
+                                    <div class="pixel"></div>
+                                    <div class="pixel"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <span class="category computer-vision">Computer Vision</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 10 min</span>
+                            </div>
+                            <h3 class="card-title">Real-time Object Detection in Edge Computing</h3>
+                            <p class="card-excerpt">Optimizing deep learning models for deployment on resource-constrained devices while maintaining accuracy and performance.</p>
+                            <div class="card-footer">
+                                <div class="article-tags">
+                                    <span class="tag">Edge Computing</span>
+                                    <span class="tag">YOLO</span>
+                                </div>
+                                <button class="read-more" data-article="edge-detection">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="blog-card" data-category="nlp" data-date="2024-11-28" data-popularity="92">
+                        <div class="card-image">
+                            <div class="nlp-visualization">
+                                <div class="word-cloud">
+                                    <span class="word" style="--size: 1.2em;">Natural</span>
+                                    <span class="word" style="--size: 0.8em;">Language</span>
+                                    <span class="word" style="--size: 1.5em;">Processing</span>
+                                    <span class="word" style="--size: 0.9em;">AI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <span class="category nlp">Natural Language Processing</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 15 min</span>
+                            </div>
+                            <h3 class="card-title">Building Multilingual NLP Models</h3>
+                            <p class="card-excerpt">Techniques for creating robust natural language processing models that work across multiple languages and cultural contexts.</p>
+                            <div class="card-footer">
+                                <div class="article-tags">
+                                    <span class="tag">Multilingual</span>
+                                    <span class="tag">BERT</span>
+                                </div>
+                                <button class="read-more" data-article="multilingual-nlp">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="blog-card" data-category="data-science" data-date="2024-11-20" data-popularity="78">
+                        <div class="card-image">
+                            <div class="data-viz">
+                                <div class="chart-bars">
+                                    <div class="bar" style="--height: 60%;"></div>
+                                    <div class="bar" style="--height: 80%;"></div>
+                                    <div class="bar" style="--height: 45%;"></div>
+                                    <div class="bar" style="--height: 90%;"></div>
+                                    <div class="bar" style="--height: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <span class="category data-science">Data Science</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 12 min</span>
+                            </div>
+                            <h3 class="card-title">Statistical Modeling for Predictive Analytics</h3>
+                            <p class="card-excerpt">Advanced statistical techniques for building robust predictive models and understanding uncertainty in machine learning predictions.</p>
+                            <div class="card-footer">
+                                <div class="article-tags">
+                                    <span class="tag">Statistics</span>
+                                    <span class="tag">Prediction</span>
+                                </div>
+                                <button class="read-more" data-article="statistical-modeling">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="blog-card" data-category="ai-research" data-date="2024-11-15" data-popularity="89">
+                        <div class="card-image">
+                            <div class="research-viz">
+                                <div class="molecules">
+                                    <div class="molecule"></div>
+                                    <div class="molecule"></div>
+                                    <div class="molecule"></div>
+                                    <div class="bond"></div>
+                                    <div class="bond"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <span class="category ai-research">AI Research</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 18 min</span>
+                            </div>
+                            <h3 class="card-title">Explainable AI: Making Black Boxes Transparent</h3>
+                            <p class="card-excerpt">Exploring techniques for interpretable machine learning and the importance of explainability in critical AI applications.</p>
+                            <div class="card-footer">
+                                <div class="article-tags">
+                                    <span class="tag">XAI</span>
+                                    <span class="tag">Interpretability</span>
+                                </div>
+                                <button class="read-more" data-article="explainable-ai">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="blog-card" data-category="tutorials" data-date="2024-11-08" data-popularity="94">
+                        <div class="card-image">
+                            <div class="code-viz">
+                                <div class="code-lines">
+                                    <div class="code-line"></div>
+                                    <div class="code-line short"></div>
+                                    <div class="code-line"></div>
+                                    <div class="code-line medium"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="article-meta">
+                                <span class="category tutorials">Tutorial</span>
+                                <span class="read-time"><i class="fas fa-clock"></i> 25 min</span>
+                            </div>
+                            <h3 class="card-title">Building Production-Ready ML Pipelines</h3>
+                            <p class="card-excerpt">A comprehensive guide to designing, implementing, and deploying machine learning pipelines that scale in production environments.</p>
+                            <div class="card-footer">
+                                <div class="article-tags">
+                                    <span class="tag">MLOps</span>
+                                    <span class="tag">Pipeline</span>
+                                </div>
+                                <button class="read-more" data-article="ml-pipelines">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container" data-aos="fade-up">
+                    <button class="btn btn-outline load-more" id="load-more">
+                        <i class="fas fa-plus"></i>
+                        <span>Load More Articles</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-wrapper" data-aos="fade-up">
+                    <div class="newsletter-content">
+                        <h2>Stay Updated with Latest Insights</h2>
+                        <p>Get weekly updates on AI research, machine learning breakthroughs, and technical tutorials delivered to your inbox.</p>
+                        <form class="newsletter-form" id="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter your email address" required>
+                                <button type="submit">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Subscribe
+                                </button>
+                            </div>
+                            <div class="newsletter-benefits">
+                                <span>✓ Weekly AI insights</span>
+                                <span>✓ Exclusive tutorials</span>
+                                <span>✓ Research updates</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="newsletter-visual">
+                        <div class="email-animation">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Article Modal -->
+    <div class="article-modal" id="article-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Article Title</h2>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Article content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h3>Deepika Gupta</h3>
+                        <p>Applied AI/ML Engineer</p>
+                    </div>
+                    <p class="footer-description">
+                        Sharing knowledge and insights from the frontier of artificial intelligence and machine learning.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#machine-learning">Machine Learning</a></li>
+                        <li><a href="#deep-learning">Deep Learning</a></li>
+                        <li><a href="#computer-vision">Computer Vision</a></li>
+                        <li><a href="#nlp">Natural Language Processing</a></li>
+                        <li><a href="#data-science">Data Science</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Medium">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="chatbot.html">AI Assistant</a></li>
+                        <li><a href="music.html">Music Studio</a></li>
+                        <li><a href="videos.html">Video Lab</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Deepika Gupta. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#rss">RSS Feed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="../js/https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="../js/../js/script.js"></script>
+    <script src="../js/blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "name": "Deepika Gupta Portfolio",
+  "description": "Professional AI/ML Engineer Portfolio Website",
+  "author": "Deepika Gupta",
+  "version": "1.0.0",
+  "deployment": {
+    "platforms": [
+      {
+        "name": "Netlify",
+        "type": "static",
+        "buildCommand": "echo 'No build required - static site'",
+        "publishDirectory": ".",
+        "environment": "production"
+      },
+      {
+        "name": "Vercel",
+        "type": "static", 
+        "buildCommand": "echo 'No build required - static site'",
+        "outputDirectory": ".",
+        "environment": "production"
+      },
+      {
+        "name": "GitHub Pages",
+        "type": "static",
+        "branch": "main",
+        "folder": "/",
+        "environment": "production"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "deploy": "git add . && git commit -m 'Content update' && git push origin main",
+    "optimize": "echo 'Optimizing assets for production...'"
+  },
+  "domains": {
+    "production": "deepikagupta.dev",
+    "staging": "staging.deepikagupta.dev"
+  }
+}

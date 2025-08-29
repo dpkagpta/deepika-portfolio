@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Studio - Deepika Gupta | AI-Powered Music Composition</title>
+    <link rel="stylesheet" href="../css/../css/styles.css">
+    <link rel="stylesheet" href="../css/music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="logo-icon">🧠</span>
+                    <div class="brand-text">
+                        <h1>Deepika Gupta</h1>
+                        <span class="tagline">Applied AI/ML Engineer</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="blog.html" class="nav-link">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a></li>
+                <li><a href="chatbot.html" class="nav-link">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Assistant</span>
+                </a></li>
+                <li><a href="music.html" class="nav-link active">
+                    <i class="fas fa-music"></i>
+                    <span>Music Studio</span>
+                </a></li>
+                <li><a href="videos.html" class="nav-link">
+                    <i class="fas fa-video"></i>
+                    <span>Video Lab</span>
+                </a></li>
+                <li><a href="about.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Music Hero Section -->
+        <section class="music-hero">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Music Studio</span>
+                    </h1>
+                    <p class="hero-description">
+                        Where artificial intelligence meets musical creativity. Explore AI-generated compositions, 
+                        interactive music tools, and the fascinating intersection of technology and artistry.
+                    </p>
+                    <div class="music-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">AI Compositions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">8</span>
+                            <span class="stat-label">Music Genres</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">120+</span>
+                            <span class="stat-label">Hours Created</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="audio-visualizer" data-aos="fade-left" data-aos-delay="200">
+                    <canvas id="visualizer-canvas"></canvas>
+                    <div class="frequency-bars">
+                        <div class="bar" style="--height: 40%"></div>
+                        <div class="bar" style="--height: 70%"></div>
+                        <div class="bar" style="--height: 90%"></div>
+                        <div class="bar" style="--height: 60%"></div>
+                        <div class="bar" style="--height: 85%"></div>
+                        <div class="bar" style="--height: 45%"></div>
+                        <div class="bar" style="--height: 75%"></div>
+                        <div class="bar" style="--height: 95%"></div>
+                        <div class="bar" style="--height: 55%"></div>
+                        <div class="bar" style="--height: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Music Composer -->
+        <section class="ai-composer">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">AI Music Composer</h2>
+                    <p class="section-subtitle">Create unique compositions using machine learning algorithms</p>
+                </div>
+
+                <div class="composer-interface" data-aos="fade-up" data-aos-delay="100">
+                    <div class="composer-controls">
+                        <div class="control-group">
+                            <label for="music-genre">Genre</label>
+                            <select id="music-genre">
+                                <option value="ambient">Ambient</option>
+                                <option value="electronic">Electronic</option>
+                                <option value="classical">Classical</option>
+                                <option value="jazz">Jazz</option>
+                                <option value="cinematic">Cinematic</option>
+                                <option value="experimental">Experimental</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="music-mood">Mood</label>
+                            <select id="music-mood">
+                                <option value="calm">Calm</option>
+                                <option value="energetic">Energetic</option>
+                                <option value="mysterious">Mysterious</option>
+                                <option value="uplifting">Uplifting</option>
+                                <option value="melancholic">Melancholic</option>
+                                <option value="dramatic">Dramatic</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="music-tempo">Tempo (BPM)</label>
+                            <input type="range" id="music-tempo" min="60" max="180" value="120">
+                            <span id="tempo-value">120</span>
+                        </div>
+
+                        <div class="control-group">
+                            <label for="music-length">Duration</label>
+                            <select id="music-length">
+                                <option value="30">30 seconds</option>
+                                <option value="60" selected>1 minute</option>
+                                <option value="120">2 minutes</option>
+                                <option value="180">3 minutes</option>
+                            </select>
+                        </div>
+
+                        <button class="generate-btn" id="generate-music">
+                            <i class="fas fa-magic"></i>
+                            Generate Composition
+                        </button>
+                    </div>
+
+                    <div class="composition-output">
+                        <div class="output-display" id="composition-display">
+                            <div class="placeholder-content">
+                                <i class="fas fa-music"></i>
+                                <h3>AI Composition Generator</h3>
+                                <p>Configure your preferences above and click "Generate Composition" to create unique AI-powered music.</p>
+                            </div>
+                        </div>
+
+                        <div class="output-controls" id="output-controls" style="display: none;">
+                            <button class="control-btn play-btn" id="play-composition">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button class="control-btn download-btn" id="download-composition">
+                                <i class="fas fa-download"></i>
+                            </button>
+                            <button class="control-btn share-btn" id="share-composition">
+                                <i class="fas fa-share"></i>
+                            </button>
+                            <div class="progress-bar">
+                                <div class="progress" id="music-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Library -->
+        <section class="music-library">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Music Library</h2>
+                    <p class="section-subtitle">Explore my collection of AI-generated compositions</p>
+                </div>
+
+                <div class="library-filters" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ambient">Ambient</button>
+                    <button class="filter-btn" data-filter="electronic">Electronic</button>
+                    <button class="filter-btn" data-filter="classical">Classical</button>
+                    <button class="filter-btn" data-filter="experimental">Experimental</button>
+                </div>
+
+                <div class="music-grid" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Track 1 -->
+                    <div class="music-card" data-genre="ambient">
+                        <div class="music-artwork">
+                            <div class="artwork-visual">
+                                <div class="wave-animation">
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                    <div class="wave"></div>
+                                </div>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-button" data-track="1">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3>Neural Harmonics</h3>
+                            <p class="artist">AI Composer Series</p>
+                            <div class="track-details">
+                                <span class="genre">Ambient</span>
+                                <span class="duration">4:23</span>
+                            </div>
+                            <div class="track-description">
+                                An ethereal ambient piece exploring the mathematical beauty of neural networks through sound.
+                            </div>
+                            <div class="track-waveform">
+                                <canvas class="waveform-canvas" width="200" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Track 2 -->
+                    <div class="music-card" data-genre="electronic">
+                        <div class="music-artwork">
+                            <div class="artwork-visual electronic">
+                                <div class="synth-pattern">
+                                    <div class="synth-line"></div>
+                                    <div class="synth-line"></div>
+                                    <div class="synth-line"></div>
+                                </div>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-button" data-track="2">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3>Digital Dreams</h3>
+                            <p class="artist">AI Composer Series</p>
+                            <div class="track-details">
+                                <span class="genre">Electronic</span>
+                                <span class="duration">3:45</span>
+                            </div>
+                            <div class="track-description">
+                                Pulsing electronic rhythms generated through deep learning algorithms and synthesized patterns.
+                            </div>
+                            <div class="track-waveform">
+                                <canvas class="waveform-canvas" width="200" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Track 3 -->
+                    <div class="music-card" data-genre="classical">
+                        <div class="music-artwork">
+                            <div class="artwork-visual classical">
+                                <div class="classical-notes">
+                                    <div class="note">♪</div>
+                                    <div class="note">♫</div>
+                                    <div class="note">♪</div>
+                                    <div class="note">♬</div>
+                                </div>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-button" data-track="3">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3>Algorithmic Symphony</h3>
+                            <p class="artist">AI Composer Series</p>
+                            <div class="track-details">
+                                <span class="genre">Classical</span>
+                                <span class="duration">6:12</span>
+                            </div>
+                            <div class="track-description">
+                                A classical composition where machine learning meets traditional orchestration and harmony.
+                            </div>
+                            <div class="track-waveform">
+                                <canvas class="waveform-canvas" width="200" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Track 4 -->
+                    <div class="music-card" data-genre="experimental">
+                        <div class="music-artwork">
+                            <div class="artwork-visual experimental">
+                                <div class="chaos-pattern">
+                                    <div class="particle"></div>
+                                    <div class="particle"></div>
+                                    <div class="particle"></div>
+                                    <div class="particle"></div>
+                                </div>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-button" data-track="4">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3>Quantum Resonance</h3>
+                            <p class="artist">AI Composer Series</p>
+                            <div class="track-details">
+                                <span class="genre">Experimental</span>
+                                <span class="duration">5:30</span>
+                            </div>
+                            <div class="track-description">
+                                An experimental piece exploring unconventional soundscapes through quantum-inspired algorithms.
+                            </div>
+                            <div class="track-waveform">
+                                <canvas class="waveform-canvas" width="200" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Track 5 -->
+                    <div class="music-card" data-genre="ambient">
+                        <div class="music-artwork">
+                            <div class="artwork-visual">
+                                <div class="ambient-flow">
+                                    <div class="flow-circle"></div>
+                                    <div class="flow-circle"></div>
+                                    <div class="flow-circle"></div>
+                                </div>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-button" data-track="5">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3>Data Streams</h3>
+                            <p class="artist">AI Composer Series</p>
+                            <div class="track-details">
+                                <span class="genre">Ambient</span>
+                                <span class="duration">7:18</span>
+                            </div>
+                            <div class="track-description">
+                                Flowing ambient textures inspired by data visualization and information theory.
+                            </div>
+                            <div class="track-waveform">
+                                <canvas class="waveform-canvas" width="200" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Track 6 -->
+                    <div class="music-card" data-genre="electronic">
+                        <div class="music-artwork">
+                            <div class="artwork-visual electronic">
+                                <div class="grid-pattern">
+                                    <div class="grid-dot"></div>
+                                    <div class="grid-dot"></div>
+                                    <div class="grid-dot"></div>
+                                    <div class="grid-dot"></div>
+                                </div>
+                            </div>
+                            <div class="play-overlay">
+                                <button class="play-button" data-track="6">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="music-info">
+                            <h3>Binary Beats</h3>
+                            <p class="artist">AI Composer Series</p>
+                            <div class="track-details">
+                                <span class="genre">Electronic</span>
+                                <span class="duration">4:07</span>
+                            </div>
+                            <div class="track-description">
+                                Rhythmic electronic composition exploring binary patterns and computational music theory.
+                            </div>
+                            <div class="track-waveform">
+                                <canvas class="waveform-canvas" width="200" height="40"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Technology -->
+        <section class="music-technology">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Technology Behind the Music</h2>
+                    <p class="section-subtitle">The AI algorithms and techniques powering musical creativity</p>
+                </div>
+
+                <div class="tech-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Neural Networks</h3>
+                        <p>LSTM and Transformer models trained on vast musical datasets to understand patterns, harmony, and composition structure.</p>
+                        <ul>
+                            <li>Sequence-to-sequence learning</li>
+                            <li>Attention mechanisms</li>
+                            <li>Multi-layered pattern recognition</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <h3>Generative Models</h3>
+                        <p>GANs and VAEs create novel musical content by learning the latent space of musical expression and creativity.</p>
+                        <ul>
+                            <li>Variational Autoencoders</li>
+                            <li>Generative Adversarial Networks</li>
+                            <li>Latent space exploration</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <h3>Audio Processing</h3>
+                        <p>Advanced signal processing and synthesis techniques for generating high-quality audio from AI compositions.</p>
+                        <ul>
+                            <li>Spectral analysis</li>
+                            <li>Real-time synthesis</li>
+                            <li>Audio effect chains</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Implementation</h3>
+                        <p>Built using Python, TensorFlow, and specialized music libraries for seamless AI-to-audio pipeline.</p>
+                        <ul>
+                            <li>Python & TensorFlow</li>
+                            <li>Music21 library</li>
+                            <li>Real-time processing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Sequencer -->
+        <section class="interactive-sequencer">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Interactive Sequencer</h2>
+                    <p class="section-subtitle">Create beats and melodies with this browser-based music sequencer</p>
+                </div>
+
+                <div class="sequencer-interface" data-aos="fade-up" data-aos-delay="100">
+                    <div class="sequencer-controls">
+                        <button class="seq-btn play-btn" id="sequencer-play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="seq-btn stop-btn" id="sequencer-stop">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                        <button class="seq-btn clear-btn" id="sequencer-clear">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        <div class="bpm-control">
+                            <label for="sequencer-bpm">BPM:</label>
+                            <input type="number" id="sequencer-bpm" value="120" min="60" max="200">
+                        </div>
+                    </div>
+
+                    <div class="sequencer-grid">
+                        <div class="track-labels">
+                            <div class="track-label">Kick</div>
+                            <div class="track-label">Snare</div>
+                            <div class="track-label">Hi-Hat</div>
+                            <div class="track-label">Synth</div>
+                        </div>
+                        <div class="step-grid" id="step-grid">
+                            <!-- Steps will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h3>Deepika Gupta Music Studio</h3>
+                        <p>AI-Powered Music Composition</p>
+                    </div>
+                    <p class="footer-description">
+                        Exploring the creative possibilities at the intersection of artificial intelligence and musical expression.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Music Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#ambient">Ambient</a></li>
+                        <li><a href="#electronic">Electronic</a></li>
+                        <li><a href="#classical">Classical</a></li>
+                        <li><a href="#experimental">Experimental</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
+                        <li><a href="chatbot.html">AI Assistant</a></li>
+                        <li><a href="videos.html">Video Lab</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="SoundCloud">
+                            <i class="fab fa-soundcloud"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Spotify">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Deepika Gupta. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/../js/script.js"></script>
+    <script src="../js/music.js"></script>
+</body>
+</html>

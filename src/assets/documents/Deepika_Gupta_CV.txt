@@ -1,0 +1,104 @@
+DEEPIKA GUPTA
+Applied AI/ML Engineer
+
+Contact Information:
+• Location: Mumbai, Maharashtra - 400059
+• Phone: +91 9717 24 3817
+• Email: deepika.7gupta7@gmail.com
+• LinkedIn: [Your LinkedIn Profile]
+• GitHub: [Your GitHub Profile]
+
+WORK EXPERIENCE
+
+Applied AI ML Senior Associate | JP Morgan & Chase | May 2021 – Present
+• Developed ML APIs to train models automatically using Gaussian optimization
+• Worked on unstructured data, designed NLP systems for classification, clustering and extraction
+• Built libraries in Python for text processing to cater to multiple use-cases for quick delivery of POCs
+• Decided the evaluation metrics for multiple ML systems to present to stakeholders
+• Responsible for delivering 50% of the POCs in the team, with 100% conversion to projects
+• Manage stakeholder relationships and reduce engagement risks
+• Source new business relationships, ideate and formulate ML solutions
+
+Data Scientist | EXL Service | June 2019 – May 2021
+• Created a general deep learning framework for text classification using standard neural networks and BERT
+• Used cutting-edge libraries for flexible training and evaluation of multiple experiments
+• Integrated all experiments with a web interface to visualize them
+• Achieved accuracy ranging from 80-98% for multiple insurance related datasets
+• Created a classification system for legal expenses based on XGBoost model
+• Moved the data gathering process from SAS to python platform
+• Used Luigi pipeline to execute the project for scalability
+• Transcribed customer care calls using AWS Transcribe
+• Summarised the calls for concise and better understanding of customers' requirements
+• Classified them for further analysis in their respective teams
+
+Data Scientist | Ex2 India | March 2018 – May 2019
+• Developed an automated system to classify internet robots with more than 90% accuracy
+• Trained ensemble model and deployed it on the client's website using Django Framework
+• Designed a personalized recommendation system to increase conversion rate
+• Created a filtering system and trained models to predict user behaviour
+• Developed an explicit scoring system to rate the quality of text on the website
+• Scraped data from websites and their APIs
+
+Market Research Analyst | IMARC Services | September 2016 – February 2018
+• Created FMCG market research reports and Cost Models to determine the cost of manufacturing goods
+• Conducted primary and secondary researches to gather information
+• Wrote market research reports on petrochemicals, chemicals, commodities, food & beverages, energy etc.
+• Virtually manufactured an entire product from scratch to determine its actual manufacturing cost
+• Collaborated with Unilever team to negotiate cost prices of goods with sellers
+
+CORE COMPETENCIES
+
+Technical Skills:
+• Natural Language Processing
+• Machine Learning & Deep Learning
+• BERT & Transformer Models
+• XGBoost & Ensemble Methods
+
+Programming Languages & Frameworks:
+• Python (Advanced)
+• SQL (Advanced)
+• Django Framework
+• Luigi Pipeline
+
+Databases:
+• MySQL
+• MongoDB
+
+Tools & Utilities:
+• Microsoft Azure
+• AWS (Transcribe, etc.)
+• Jira
+• Git
+
+ACADEMIC PROFILE
+
+Bachelor in Science with Honours in Mathematics
+Lady Shri Ram College for Women, Delhi University
+June 2013 – June 2016
+
+Specialization:
+• Statistical Analysis
+• Probability Theory
+• Linear Algebra
+• Advanced Calculus
+
+ACHIEVEMENTS
+
+• Delivering 50% of team's POCs with 100% conversion to projects at JP Morgan & Chase
+• Achieved 80-98% accuracy across multiple insurance datasets at EXL Service
+• Developed internet robot detection system with 90%+ accuracy at Ex2 India
+• Successfully migrated data gathering process from SAS to Python platform
+• Built scalable ML systems using Luigi pipeline for enterprise deployment
+
+PROJECTS HIGHLIGHTS
+
+• ML APIs with Gaussian Optimization for automatic model training
+• Deep Learning Framework for Text Classification using BERT
+• Bot Manager with ML for Internet Robot Detection (90%+ accuracy)
+• Personalized Recommendation Systems for E-commerce
+• Customer Care Call Analysis and Summarization using AWS Transcribe
+• Market Research and Cost Models for FMCG Manufacturing
+
+---
+Generated on: December 2024
+Portfolio Website: [Your Website URL]

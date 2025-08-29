@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lab - Deepika Gupta | AI-Powered Video Production</title>
+    <link rel="stylesheet" href="../css/../css/styles.css">
+    <link rel="stylesheet" href="../css/videos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <div class="brand-logo">
+                    <span class="logo-icon">🧠</span>
+                    <div class="brand-text">
+                        <h1>Deepika Gupta</h1>
+                        <span class="tagline">Applied AI/ML Engineer</span>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a></li>
+                <li><a href="blog.html" class="nav-link">
+                    <i class="fas fa-blog"></i>
+                    <span>Blog</span>
+                </a></li>
+                <li><a href="chatbot.html" class="nav-link">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Assistant</span>
+                </a></li>
+                <li><a href="music.html" class="nav-link">
+                    <i class="fas fa-music"></i>
+                    <span>Music Studio</span>
+                </a></li>
+                <li><a href="videos.html" class="nav-link active">
+                    <i class="fas fa-video"></i>
+                    <span>Video Lab</span>
+                </a></li>
+                <li><a href="about.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Video Hero Section -->
+        <section class="video-hero">
+            <div class="container">
+                <div class="hero-content" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Video Laboratory</span>
+                    </h1>
+                    <p class="hero-description">
+                        Where cinematography meets cutting-edge technology. Explore my collection of educational content, 
+                        AI-powered video projects, and creative documentaries that bridge science and art.
+                    </p>
+                    <div class="video-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">25</span>
+                            <span class="stat-label">Videos Created</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">AI Documentaries</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Total Views</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-video-preview" data-aos="fade-left" data-aos-delay="200">
+                    <div class="video-frame">
+                        <div class="frame-content">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="video-overlay">
+                                <h3>Latest: AI in Healthcare</h3>
+                                <p>Exploring the future of medical AI</p>
+                            </div>
+                        </div>
+                        <div class="frame-controls">
+                            <div class="control-dot active"></div>
+                            <div class="control-dot"></div>
+                            <div class="control-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Video -->
+        <section class="featured-video">
+            <div class="container">
+                <div class="featured-wrapper" data-aos="fade-up">
+                    <div class="featured-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Featured Production</span>
+                    </div>
+                    <div class="featured-content">
+                        <div class="video-player">
+                            <div class="player-container">
+                                <div class="video-thumbnail">
+                                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'><rect width='800' height='450' fill='%23f3f4f6'/><text x='400' y='225' text-anchor='middle' fill='%236b7280' font-family='Arial' font-size='24'>AI in Healthcare Documentary</text></svg>" alt="Featured Video">
+                                    <div class="play-button-large" id="featured-play">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="video-controls">
+                                    <div class="progress-bar">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="control-buttons">
+                                        <button class="control-btn">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        <button class="control-btn">
+                                            <i class="fas fa-volume-up"></i>
+                                        </button>
+                                        <span class="time-display">0:00 / 12:45</span>
+                                        <button class="control-btn">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h2>The Future of AI in Healthcare</h2>
+                            <div class="video-meta">
+                                <span class="category documentary">Documentary</span>
+                                <span class="duration">12:45</span>
+                                <span class="views">8.2K views</span>
+                                <span class="date">Nov 2024</span>
+                            </div>
+                            <p class="video-description">
+                                A comprehensive exploration of how artificial intelligence is revolutionizing healthcare, 
+                                from diagnostic imaging to drug discovery. This documentary features interviews with 
+                                leading researchers and showcases real-world applications of AI in medical settings.
+                            </p>
+                            <div class="video-tags">
+                                <span class="tag">AI Healthcare</span>
+                                <span class="tag">Medical Imaging</span>
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">Innovation</span>
+                            </div>
+                            <div class="video-actions">
+                                <button class="action-btn like-btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>245</span>
+                                </button>
+                                <button class="action-btn share-btn">
+                                    <i class="fas fa-share"></i>
+                                    <span>Share</span>
+                                </button>
+                                <button class="action-btn save-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                    <span>Save</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Categories -->
+        <section class="video-categories">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Video Categories</h2>
+                    <p class="section-subtitle">Explore content across different themes and topics</p>
+                </div>
+
+                <div class="category-filters" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-category="all">All Videos</button>
+                    <button class="filter-btn" data-category="documentary">Documentaries</button>
+                    <button class="filter-btn" data-category="tutorial">Tutorials</button>
+                    <button class="filter-btn" data-category="experimental">Experimental</button>
+                    <button class="filter-btn" data-category="ai-showcase">AI Showcase</button>
+                    <button class="filter-btn" data-category="behind-scenes">Behind the Scenes</button>
+                </div>
+
+                <div class="videos-grid" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Video 1 -->
+                    <div class="video-card" data-category="documentary">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder documentary">
+                                <i class="fas fa-microscope"></i>
+                                <div class="overlay-text">Medical AI Research</div>
+                            </div>
+                            <div class="video-duration">15:30</div>
+                            <div class="play-overlay">
+                                <button class="play-btn" data-video="medical-ai">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Medical AI: Diagnosing the Future</h3>
+                            <p class="video-excerpt">
+                                An in-depth look at how machine learning algorithms are being trained to detect diseases 
+                                earlier and more accurately than traditional methods.
+                            </p>
+                            <div class="video-metadata">
+                                <span class="category documentary">Documentary</span>
+                                <span class="views">5.8K views</span>
+                                <span class="date">Oct 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-card" data-category="tutorial">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder tutorial">
+                                <i class="fas fa-code"></i>
+                                <div class="overlay-text">Neural Network Tutorial</div>
+                            </div>
+                            <div class="video-duration">22:18</div>
+                            <div class="play-overlay">
+                                <button class="play-btn" data-video="neural-tutorial">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Building Neural Networks from Scratch</h3>
+                            <p class="video-excerpt">
+                                A comprehensive tutorial on implementing neural networks without frameworks, 
+                                covering backpropagation, optimization, and practical tips.
+                            </p>
+                            <div class="video-metadata">
+                                <span class="category tutorial">Tutorial</span>
+                                <span class="views">12.3K views</span>
+                                <span class="date">Sep 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-card" data-category="experimental">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder experimental">
+                                <i class="fas fa-palette"></i>
+                                <div class="overlay-text">AI Art Generation</div>
+                            </div>
+                            <div class="video-duration">8:45</div>
+                            <div class="play-overlay">
+                                <button class="play-btn" data-video="ai-art">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-content">
+                            <h3>When Algorithms Dream: AI Art</h3>
+                            <p class="video-excerpt">
+                                An experimental short film exploring the creative potential of AI through 
+                                generative art and style transfer techniques.
+                            </p>
+                            <div class="video-metadata">
+                                <span class="category experimental">Experimental</span>
+                                <span class="views">7.1K views</span>
+                                <span class="date">Aug 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 4 -->
+                    <div class="video-card" data-category="ai-showcase">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder ai-showcase">
+                                <i class="fas fa-robot"></i>
+                                <div class="overlay-text">Computer Vision Demo</div>
+                            </div>
+                            <div class="video-duration">11:22</div>
+                            <div class="play-overlay">
+                                <button class="play-btn" data-video="cv-demo">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-content">
+                            <h3>Real-time Computer Vision Systems</h3>
+                            <p class="video-excerpt">
+                                Demonstrating advanced computer vision applications including object detection, 
+                                facial recognition, and autonomous navigation systems.
+                            </p>
+                            <div class="video-metadata">
+                                <span class="category ai-showcase">AI Showcase</span>
+                                <span class="views">9.4K views</span>
+                                <span class="date">Jul 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 5 -->
+                    <div class="video-card" data-category="behind-scenes">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder behind-scenes">
+                                <i class="fas fa-video"></i>
+                                <div class="overlay-text">Creative Process</div>
+                            </div>
+                            <div class="video-duration">6:33</div>
+                            <div class="play-overlay">
+                                <button class="play-btn" data-video="creative-process">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-content">
+                            <h3>My Creative Workflow: Tech Meets Art</h3>
+                            <p class="video-excerpt">
+                                A behind-the-scenes look at how I combine technical expertise with creative vision 
+                                to produce educational and artistic content.
+                            </p>
+                            <div class="video-metadata">
+                                <span class="category behind-scenes">Behind Scenes</span>
+                                <span class="views">4.2K views</span>
+                                <span class="date">Jun 2024</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 6 -->
+                    <div class="video-card" data-category="documentary">
+                        <div class="video-thumbnail">
+                            <div class="thumbnail-placeholder documentary">
+                                <i class="fas fa-globe"></i>
+                                <div class="overlay-text">AI Ethics Exploration</div>
+                            </div>
+                            <div class="video-duration">18:15</div>
+                            <div class="play-overlay">
+                                <button class="play-btn" data-video="ai-ethics">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="video-content">
+                            <h3>AI Ethics: Navigating the Future</h3>
+                            <p class="video-excerpt">
+                                A thought-provoking documentary examining the ethical implications of AI development 
+                                and the responsibilities of technologists.
+                            </p>
+                            <div class="video-metadata">
+                                <span class="category documentary">Documentary</span>
+                                <span class="views">6.7K views</span>
+                                <span class="date">May 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more-container">
+                    <button class="btn btn-outline load-more" id="load-more-videos">
+                        <i class="fas fa-plus"></i>
+                        <span>Load More Videos</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Production Tools -->
+        <section class="production-tools">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Production Technology</h2>
+                    <p class="section-subtitle">The tools and techniques behind my video productions</p>
+                </div>
+
+                <div class="tools-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Video Editing</h3>
+                        <p>Professional editing using Adobe Premiere Pro, DaVinci Resolve, and custom AI-powered editing tools for automated cutting and color grading.</p>
+                        <div class="tool-features">
+                            <span class="feature">AI-assisted editing</span>
+                            <span class="feature">Color grading</span>
+                            <span class="feature">Motion graphics</span>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Cinematography</h3>
+                        <p>High-quality capture using professional cameras, drones, and AI-enhanced stabilization for smooth, cinematic footage.</p>
+                        <div class="tool-features">
+                            <span class="feature">4K recording</span>
+                            <span class="feature">Drone footage</span>
+                            <span class="feature">AI stabilization</span>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>AI Enhancement</h3>
+                        <p>Leveraging machine learning for upscaling, noise reduction, and automated subtitle generation to enhance video quality.</p>
+                        <div class="tool-features">
+                            <span class="feature">Video upscaling</span>
+                            <span class="feature">Noise reduction</span>
+                            <span class="feature">Auto subtitles</span>
+                        </div>
+                    </div>
+
+                    <div class="tool-card">
+                        <div class="tool-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Analytics</h3>
+                        <p>Data-driven content optimization using viewer engagement analytics and A/B testing for thumbnails and content structure.</p>
+                        <div class="tool-features">
+                            <span class="feature">Engagement tracking</span>
+                            <span class="feature">A/B testing</span>
+                            <span class="feature">Performance metrics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Series -->
+        <section class="video-series">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="section-title">Video Series</h2>
+                    <p class="section-subtitle">Explore my ongoing video series and educational content</p>
+                </div>
+
+                <div class="series-grid" data-aos="fade-up" data-aos-delay="100">
+                    <div class="series-card">
+                        <div class="series-banner">
+                            <div class="banner-content">
+                                <h3>AI Explained</h3>
+                                <p>Making complex AI concepts accessible</p>
+                                <div class="episode-count">12 Episodes</div>
+                            </div>
+                        </div>
+                        <div class="series-info">
+                            <p>A comprehensive series breaking down artificial intelligence concepts, from basic neural networks to advanced architectures like transformers and GANs.</p>
+                            <div class="series-stats">
+                                <span>45K total views</span>
+                                <span>New episode weekly</span>
+                            </div>
+                            <button class="series-btn">
+                                <i class="fas fa-play"></i>
+                                Watch Series
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <div class="series-banner">
+                            <div class="banner-content">
+                                <h3>Code to Creation</h3>
+                                <p>From algorithms to artistic expression</p>
+                                <div class="episode-count">8 Episodes</div>
+                            </div>
+                        </div>
+                        <div class="series-info">
+                            <p>Exploring how programming and algorithms can be used as creative tools for generating art, music, and interactive experiences.</p>
+                            <div class="series-stats">
+                                <span>28K total views</span>
+                                <span>Monthly releases</span>
+                            </div>
+                            <button class="series-btn">
+                                <i class="fas fa-play"></i>
+                                Watch Series
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="series-card">
+                        <div class="series-banner">
+                            <div class="banner-content">
+                                <h3>Tech Futures</h3>
+                                <p>Exploring emerging technologies</p>
+                                <div class="episode-count">6 Episodes</div>
+                            </div>
+                        </div>
+                        <div class="series-info">
+                            <p>Documentary series examining the potential impact of emerging technologies on society, work, and human creativity.</p>
+                            <div class="series-stats">
+                                <span>35K total views</span>
+                                <span>Quarterly specials</span>
+                            </div>
+                            <button class="series-btn">
+                                <i class="fas fa-play"></i>
+                                Watch Series
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="video-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-video-title">Video Title</h3>
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-video">
+                <div class="video-placeholder" id="modal-video-content">
+                    <i class="fas fa-play-circle"></i>
+                    <p>Video would load here</p>
+                </div>
+            </div>
+            <div class="modal-description" id="modal-video-description">
+                <p>Video description and details would appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h3>Deepika Gupta Video Lab</h3>
+                        <p>AI-Powered Video Production</p>
+                    </div>
+                    <p class="footer-description">
+                        Creating compelling visual stories that bridge the gap between complex technology and human understanding.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Video Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#documentary">Documentaries</a></li>
+                        <li><a href="#tutorial">Tutorials</a></li>
+                        <li><a href="#experimental">Experimental</a></li>
+                        <li><a href="#ai-showcase">AI Showcase</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="blog.html">Technical Blog</a></li>
+                        <li><a href="chatbot.html">AI Assistant</a></li>
+                        <li><a href="music.html">Music Studio</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Vimeo">
+                            <i class="fab fa-vimeo"></i>
+                        </a>
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Deepika Gupta. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/../js/script.js"></script>
+    <script src="../js/videos.js"></script>
+</body>
+</html>
